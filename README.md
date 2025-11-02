@@ -39,3 +39,14 @@ This DApp allows users to **create and manage crowdfunding campaigns** directly 
 ```bash
 git clone https://github.com/Dkhatke/Web3app.git
 cd Web3app
+
+2️⃣ Install Dependencies
+If you use serve for local hosting:
+npm install -g serve
+
+3️⃣ Run the App
+npx serve
+
+
+Then open your browser and go to:
+👉 http://localhost:3000
