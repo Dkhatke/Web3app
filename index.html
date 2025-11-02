@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CrowdFundPro</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+    .tier-card { transition: all 0.2s ease-in-out; }
+    .tier-card:hover { transform: scale(1.02); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">CrowdFundPro</h1>
+    <div class="flex gap-2">
+      <button id="connectWalletBtn" class="px-3 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">Connect Wallet</button>
+      <button id="createCampaignBtn" class="px-3 py-2 rounded bg-green-600 text-white hover:bg-green-700">Create Campaign</button>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="p-4 flex gap-8 flex-wrap">
+
+    <!-- Campaigns List -->
+    <section class="flex-1 min-w-[300px]">
+      <h2 class="font-semibold mb-2">Campaigns</h2>
+      <div id="campaignsGrid" class="grid grid-cols-1 gap-4"></div>
+    </section>
+
+    <!-- Selected Campaign -->
+    <section class="flex-1 min-w-[300px]">
+      <h2 class="font-semibold mb-2">Selected Campaign</h2>
+      <div class="bg-white rounded-lg shadow p-4">
+        <div id="selectedName" class="font-bold text-lg">—</div>
+        <div id="selectedOwner" class="text-sm text-gray-500 mt-1">Owner: —</div>
+        <div id="selectedStatus" class="mt-2 text-sm">Status: —</div>
+        <div id="selectedBalance" class="mt-2 text-lg font-semibold">0 ETH</div>
+        <div id="tiersList" class="mt-4 space-y-2"></div>
+        <div class="mt-4 flex gap-2">
+          <button id="withdrawBtn" class="px-3 py-2 bg-yellow-500 text-white rounded" disabled>Withdraw</button>
+          <button id="refundBtn" class="px-3 py-2 bg-red-500 text-white rounded" disabled>Refund</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scripts -->
+  <!-- In development this demo script provides a local mock UI. Replace with ./app.js for real contract integration. -->
+  <script type="module" src="./app.mock.js"></script>
+</body>
+</html>
